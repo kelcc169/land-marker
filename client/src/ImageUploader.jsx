@@ -15,7 +15,7 @@ class ImageUploader extends React.Component {
 
     return (
       <>
-        <div className="upload" >
+        <div >
           {clickme}
         </div>
       </>

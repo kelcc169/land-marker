@@ -89,8 +89,8 @@ class App extends React.Component {
       contents = (
         <>
           <nav>
-            <Link className="brn-default" to="/login">Login</Link>{" "}
-            <Link className="brn-default"  to="/signup">Signup</Link>
+            <Link to="/login">Login</Link>{" "}
+            <Link to="/signup">Signup</Link>
           </nav>
           <Route path="/login" 
             render={(props) => <Login liftToken={this.liftToken} {...props} />} 

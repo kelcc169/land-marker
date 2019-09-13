@@ -42,7 +42,7 @@ class Login extends React.Component {
 
   render() {
     return (
-      <div className="Login">
+      <div>
         <h3>Log into your account:</h3>
         <form onSubmit={this.handleSubmit}>
           <input type="email"

@@ -18,7 +18,7 @@ const Map = (props) => {
 
 	if (!lat && !lng) {
 		contents = (
-			<div className="mapboxBox">
+			<div>
 				<Map
 					center={[-122.3352, 47.6079]}
 					style="mapbox://styles/mapbox/streets-v9"
@@ -32,7 +32,7 @@ const Map = (props) => {
 		)
 	}	else {
 		contents = (
-			<div className="mapboxBox">
+			<div>
 				<Map
 					center={[lng, lat]}
 					style="mapbox://styles/mapbox/streets-v9"

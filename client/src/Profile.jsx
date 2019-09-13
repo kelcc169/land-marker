@@ -82,23 +82,19 @@ class Profile extends React.Component {
 
     return(
       <>
-        <div className="log">
-          <img className="image" src="https://res.cloudinary.com/ddxp1ymgb/image/upload/v1564100738/bl9cln3aqj6zwolwqspb.png"/>
-          <i style={{fontSize:"1.3em"}} class="fab fa-stripe-s">cavenger Hunt</i>
-        </div>
-        <div className="jumbotron">
+        <div>
           <nav>
-            <div className="left-margin">
+            <div >
               <i class="fas fa-atlas"/>
-              <Link style={{textDecoration:'none'}}to='/' >Adventures</Link>{' '}{' '}
+              <Link to='/' >Adventures</Link>{' '}{' '}
             </div>
-            <div className="left-margin">
+            <div>
               <i class="fas fa-map-marked-alt"></i>
-              <Link style={{textDecoration:'none'}}to='/create' >Create</Link>{' '}{' '}
+              <Link to='/create' >Create</Link>{' '}{' '}
             </div>
-            <div className="left-margin">
+            <div>
               <i class="fas fa-street-view"></i>
-              <Link style={{textDecoration:'none'}} to='/myadventures' >Profile</Link>
+              <Link to='/myadventures' >Profile</Link>
             </div>
           </nav>
         </div>
