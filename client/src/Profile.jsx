@@ -85,15 +85,15 @@ class Profile extends React.Component {
         <div>
           <nav>
             <div >
-              <i class="fas fa-atlas"/>
+              <i className="fas fa-atlas"/>
               <Link to='/' >Adventures</Link>{' '}{' '}
             </div>
             <div>
-              <i class="fas fa-map-marked-alt"></i>
+              <i className="fas fa-map-marked-alt"></i>
               <Link to='/create' >Create</Link>{' '}{' '}
             </div>
             <div>
-              <i class="fas fa-street-view"></i>
+              <i className="fas fa-street-view"></i>
               <Link to='/myadventures' >Profile</Link>
             </div>
           </nav>

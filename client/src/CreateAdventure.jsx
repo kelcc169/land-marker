@@ -127,7 +127,7 @@ class CreateAdventure extends React.Component {
         <div>
           <form onSubmit={(e) => this.handleSubmit(e)}>
             <input type="text" name="listName" placeholder="Name Your Adventure" onChange={this.handleInputChange} />
-            <input type="submit" value="Frank" />
+            <input type="submit" value="Start" />
           </form>
         </div>
       )
