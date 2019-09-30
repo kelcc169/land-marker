@@ -55,7 +55,7 @@ class Login extends React.Component {
             placeholder="Enter your password..."
             onChange={this.handleInputChange}
             value={this.state.password} /><br />
-          <input type="submit" value="Log In!" />
+          <input className="btn btn-primary" type="submit" value="Log In!" />
         </form>
       </div>
     )

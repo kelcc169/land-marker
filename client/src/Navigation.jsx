@@ -17,7 +17,7 @@ const Navigation = ({logout, userId}) => {
   } else {
     contents = (
       <>
-        <Link to="/" className="nav-link topnav">Adventures</Link>
+        <Link to="/" className="nav-link topnav">Home</Link>
         <Link to="/create" className="nav-link topnav">Create</Link>
         <Link to="/" className="nav-link topnav" onClick={(e) => logout(e)}>Logout</Link>
       </>
@@ -25,7 +25,7 @@ const Navigation = ({logout, userId}) => {
   }
 
   return(
-    <nav className="justify-content-between navbar navbar-expand navbar-light sticky-top bg-primary">
+    <nav className="justify-content-between navbar navbar-expand navbar-light bg-primary">
       <span className='navbar-brand' ><i className="fas fa-map-marked-alt" />  Land-Marker</span>
       <Nav>
         {contents}

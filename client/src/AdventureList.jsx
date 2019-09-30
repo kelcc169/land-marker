@@ -15,7 +15,7 @@ const AdventureList = (props) => {
               <input type="submit" value="Rename List" />
               <input hidden type="text" name="listId" readOnly value={list._id} />
             </form>
-            <button onClick={props.deleteList} value={list._id} >Delete</button>
+            <button className="btn btn-primary" onClick={props.deleteList} value={list._id} >Delete</button>
           </div>
         )}
       </div>
@@ -27,7 +27,7 @@ const AdventureList = (props) => {
           <div key={index}>
             <h3>{list.name}</h3>
             <Link to='/adventure'>
-              <button onClick={props.handleListSelect} value={list._id} > Go On This Adventure! </button>
+              <button className="btn btn-primary" onClick={() => props.handleListSelect(list._id)} value={list._id} > Go On This Adventure! </button>
             </Link>
           </div>
         )}

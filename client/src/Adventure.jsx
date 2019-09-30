@@ -41,6 +41,7 @@ class Adventure extends React.Component {
 	}
 
 	componentDidMount() {
+		console.log('hello', this.props.listId)
 		axios.get(`/api/lists/${this.props.listId}`)
 			.then(res => {
 				let list = res.data;
@@ -60,8 +61,8 @@ class Adventure extends React.Component {
 		return (
 			<>
 				<img src={this.state.pictureUrl} alt='goal' />
-				<button onClick={this.handleLocationChange} className="left-margin btn-success" >Next Location</button>
 				<Map lng={this.state.locLong} lat={this.state.locLat} />
+				<button onClick={this.handleLocationChange} className="left-margin btn-warning" >Next Location</button>
 			</>
 		)	
 	}

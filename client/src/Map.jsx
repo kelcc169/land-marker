@@ -24,7 +24,7 @@ const Map = (props) => {
 					style="mapbox://styles/mapbox/streets-v9"
 					containerStyle={{
 						height: '50vh',
-						width: '91vw'
+						width: '90vw'
 					}}>
 					<MapMarker handleUserLocation={props.handleUserLocation}/>
 				</Map>

@@ -21,8 +21,9 @@ class Profile extends React.Component {
     this.deleteList = this.deleteList.bind(this)
   }
 
-  handleListSelect(e) {
-    let selectedList = e.target.value;
+  handleListSelect(listId) {
+    console.log('hi')
+    let selectedList = listId;
     this.setState({
       selectedList
     })
@@ -81,14 +82,14 @@ class Profile extends React.Component {
     let lists = this.state.lists ? this.state.lists : [];
 
     return(
-      <>
+      <div className="profile">
         <Route exact path='/' 
           render={() => <AdventureList 
             lists={lists} 
             handleListSelect={this.handleListSelect} />}
         />
         <Route path='/adventure' 
-          render={(props) => <Adventure 
+          render={() => <Adventure 
             listId={this.state.selectedList} />}
         />
         <Route path='/create'
@@ -105,7 +106,7 @@ class Profile extends React.Component {
             handleInputChange={this.handleInputChange}
             handleNameUpdate={this.handleNameUpdate} />} 
         />
-      </>
+      </div>
     )
   }
 }

@@ -1,6 +1,7 @@
 body, html {
   margin: 0 auto;
-  padding: 0px;
+  text-align: center;
+  height: 100%;
 }
 
 .nav-link:hover {
@@ -10,4 +11,16 @@ body, html {
 .topnav {
   color: rgba(0, 0, 0, 0.7);
   padding: 8px;
+}
+
+.profile {
+  display: block;
+  padding: 40px 5%;
+  height: 100vh;
+}
+
+img {
+  border-radius: 50%;
+  height: 150px;
+  width: 150px;
 }
