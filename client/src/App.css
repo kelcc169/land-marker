@@ -1,0 +1,13 @@
+body, html {
+  margin: 0 auto;
+  padding: 0px;
+}
+
+.nav-link:hover {
+  color: rgb(6, 98, 184);
+}
+
+.topnav {
+  color: rgba(0, 0, 0, 0.7);
+  padding: 8px;
+}

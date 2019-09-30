@@ -3,7 +3,7 @@ import axios from 'axios';
 import Adventure from './Adventure';
 import AdventureList from './AdventureList';
 import CreateAdventure from './CreateAdventure';
-import { Route, Link } from 'react-router-dom';
+import { Route } from 'react-router-dom';
 
 class Profile extends React.Component {
   constructor(props) {
@@ -82,22 +82,6 @@ class Profile extends React.Component {
 
     return(
       <>
-        <div>
-          <nav>
-            <div >
-              <i className="fas fa-atlas"/>
-              <Link to='/' >Adventures</Link>{' '}{' '}
-            </div>
-            <div>
-              <i className="fas fa-map-marked-alt"></i>
-              <Link to='/create' >Create</Link>{' '}{' '}
-            </div>
-            <div>
-              <i className="fas fa-street-view"></i>
-              <Link to='/myadventures' >Profile</Link>
-            </div>
-          </nav>
-        </div>
         <Route exact path='/' 
           render={() => <AdventureList 
             lists={lists} 

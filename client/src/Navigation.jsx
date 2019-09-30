@@ -1,5 +1,7 @@
 import React from 'react';
 
+import { Nav } from 'react-bootstrap';
+
 import { Link } from 'react-router-dom';
 
 const Navigation = ({logout, userId}) => {
@@ -8,22 +10,26 @@ const Navigation = ({logout, userId}) => {
   if (!userId) {
     contents = (
       <>
-        <Link to="/login">Login</Link>
-        <Link to="/signup">Sign Up</Link>
+        <Link to="/login" className="nav-link topnav">Login</Link>
+        <Link to="/signup" className="nav-link topnav">Sign Up</Link>
       </>
     )
   } else {
     contents = (
       <>
-        <Link to="/">Home</Link>
-        <Link to="/" onClick={(e) => logout(e)}>Logout</Link>
+        <Link to="/" className="nav-link topnav">Adventures</Link>
+        <Link to="/create" className="nav-link topnav">Create</Link>
+        <Link to="/" className="nav-link topnav" onClick={(e) => logout(e)}>Logout</Link>
       </>
     )
   }
 
   return(
-    <nav>
-      {contents}
+    <nav className="justify-content-between navbar navbar-expand navbar-light sticky-top bg-primary">
+      <span className='navbar-brand' ><i className="fas fa-map-marked-alt" />  Land-Marker</span>
+      <Nav>
+        {contents}
+      </Nav>
     </nav>
   )
 }

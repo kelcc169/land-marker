@@ -84,7 +84,7 @@ class App extends React.Component {
       contents = (
         <>
           <Navigation logout={this.logout} userId={user._id}/>
-          <Profile user={user} token={token} />
+          <Route exact path ="/" render={() => <Profile user={user} token={token} /> } />
         </>
       );
     } else {
