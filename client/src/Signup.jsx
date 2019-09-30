@@ -36,7 +36,7 @@ class Signup extends React.Component {
         })
       } else {
         localStorage.setItem('mernToken', res.data.token);
-        this.props.liftToken(res.data)
+        this.props.liftToken(res.data, this.props.history);
       }
     }).catch(err => {
       this.setState({

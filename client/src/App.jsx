@@ -3,11 +3,11 @@ import axios from 'axios';
 import Login from './Login';
 import Signup from './Signup';
 import Profile from './Profile';
+import Navigation from './Navigation';
 import {
   BrowserRouter as Router,
-  Route,
-  Link
-}from 'react-router-dom';
+  Route
+} from 'react-router-dom';
 
 class App extends React.Component {
   constructor(props) {
@@ -58,8 +58,7 @@ class App extends React.Component {
     this.setState({
       token,
       user
-    }, () => history.push('/'))
-
+    }, () => history.push('/'))  
   }
 
   logout() {
@@ -83,31 +82,29 @@ class App extends React.Component {
 
     if (user) {
       contents = (
-        <Profile user={user} token={token} />
+        <>
+          <Navigation logout={this.logout} userId={user._id}/>
+          <Profile user={user} token={token} />
+        </>
       );
     } else {
       contents = (
         <>
-          <nav>
-            <Link to="/login">Login</Link>{" "}
-            <Link to="/signup">Signup</Link>
-          </nav>
+          <Navigation logout={this.logout} />
           <Route path="/login" 
             render={(props) => <Login liftToken={this.liftToken} {...props} />} 
           />
           <Route path="/signup" 
-            render={() => <Signup liftToken={this.liftToken}/>} 
+            render={(props) => <Signup liftToken={this.liftToken} {...props} />} 
           />
         </>
       )
     }
     
     return(
-      <>
-        <Router>
+      <Router>
         {contents} 
-        </Router>
-      </>
+      </Router>
     );
   }
 }
