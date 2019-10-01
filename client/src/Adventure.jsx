@@ -62,7 +62,7 @@ class Adventure extends React.Component {
 			<>
 				<img src={this.state.pictureUrl} alt='goal' />
 				<Map lng={this.state.locLong} lat={this.state.locLat} />
-				<button onClick={this.handleLocationChange} className="left-margin btn-warning" >Next Location</button>
+				<button onClick={this.handleLocationChange} className="left-margin btn-primary btn location" >Next Location</button>
 			</>
 		)	
 	}

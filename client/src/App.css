@@ -1,7 +1,17 @@
 body, html {
   margin: 0 auto;
   text-align: center;
-  height: 100%;
+}
+
+body {
+  background-color: rgba(172, 177, 182, 0.534)
+}
+
+.navbar {
+  position: absolute;
+  bottom: 0px;
+  width: 100vw;
+  height: 100px;
 }
 
 .nav-link:hover {
@@ -14,12 +24,24 @@ body, html {
 }
 
 .profile {
-  display: block;
-  padding: 40px 5%;
-  height: 100vh;
+  /* display: block; */
+  padding: 5%;
+  height: 90vh;
+}
+
+.mapboxgl-canvas {
+  border-radius: 10px 100px 10px 10px;
+}
+
+.location {
+  margin: 15px;
 }
 
 img {
+  position: absolute;
+  top: 5px;
+  right: 5px;
+  z-index: 1;
   border-radius: 50%;
   height: 150px;
   width: 150px;

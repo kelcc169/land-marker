@@ -3,8 +3,6 @@ import ReactMapboxGl, { Marker } from 'react-mapbox-gl';
 import MapMarker from './MapMarker';
 
 const Map = (props) => {
-		// let creating = this.props.creating
-		//SAVE THE BELOW TWO LINES
 		const Map = new ReactMapboxGl({
 			accessToken: 'pk.eyJ1IjoibWNkdWRsZXk4NyIsImEiOiJjanhlejR5YWIwdWFwM25tcHNubDdpejIwIn0.n-RmlJrsycjQ76M82M_02Q',
 			container: 'map',
@@ -23,7 +21,7 @@ const Map = (props) => {
 					center={[-122.3352, 47.6079]}
 					style="mapbox://styles/mapbox/streets-v9"
 					containerStyle={{
-						height: '50vh',
+						height: '75vh',
 						width: '90vw'
 					}}>
 					<MapMarker handleUserLocation={props.handleUserLocation}/>
@@ -37,7 +35,7 @@ const Map = (props) => {
 					center={[lng, lat]}
 					style="mapbox://styles/mapbox/streets-v9"
 					containerStyle={{
-						height: '50vh',
+						height: '75vh',
 						width: '90vw'
 					}}>
 					<Marker coordinates={[lng, lat]}
