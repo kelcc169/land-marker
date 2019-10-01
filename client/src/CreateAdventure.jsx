@@ -32,7 +32,6 @@ class CreateAdventure extends React.Component {
   }
 
   handleUserLocation(e) {
-    // e.preventDefault();
     this.setState({
       latitude: e.lat,
       longitude: e.lng

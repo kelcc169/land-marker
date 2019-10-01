@@ -83,20 +83,24 @@ class App extends React.Component {
     if (user) {
       contents = (
         <>
-          <Navigation logout={this.logout} userId={user._id}/>
           <Route path ="/" render={() => <Profile user={user} token={token} /> } />
+          <Navigation logout={this.logout} userId={user._id}/>
         </>
       );
     } else {
       contents = (
         <>
-          <Navigation logout={this.logout} />
+          <div className="landing" ><i className="fas fa-map-marked-alt" />    Land-Marker</div>
+          <Route exact path="/" 
+            render={(props) => <Login liftToken={this.liftToken} {...props} />} 
+          />
           <Route path="/login" 
             render={(props) => <Login liftToken={this.liftToken} {...props} />} 
           />
           <Route path="/signup" 
             render={(props) => <Signup liftToken={this.liftToken} {...props} />} 
           />
+          <Navigation logout={this.logout} />
         </>
       )
     }

@@ -7,11 +7,18 @@ body {
   background-color: rgba(172, 177, 182, 0.534)
 }
 
+.landing {
+  margin: 100px 0px 65px 0px;
+  font-size: 2em;
+  font-weight: bold;
+}
+
 .navbar {
   position: absolute;
   bottom: 0px;
   width: 100vw;
   height: 100px;
+  font-weight: bold;
 }
 
 .nav-link:hover {
@@ -24,7 +31,6 @@ body {
 }
 
 .profile {
-  /* display: block; */
   padding: 5%;
   height: 90vh;
 }
@@ -45,4 +51,8 @@ img {
   border-radius: 50%;
   height: 150px;
   width: 150px;
+}
+
+input {
+  margin: 5px;
 }

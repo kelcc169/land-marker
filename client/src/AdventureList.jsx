@@ -7,7 +7,7 @@ const AdventureList = (props) => {
   
   if (props.user) {
     contents = (
-      <div>
+      <div className="adventureCard">
         {props.lists.map( (list, index) => 
           <div key={index}>
             <h3>{list.name}</h3>
@@ -23,7 +23,7 @@ const AdventureList = (props) => {
     )
   } else {
     contents = (
-      <div>
+      <div className="adventureCard" >
         {props.lists.map( (list, index) => 
           <div key={index}>
             <h3>{list.name}</h3>
