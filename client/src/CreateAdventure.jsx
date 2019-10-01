@@ -123,10 +123,10 @@ class CreateAdventure extends React.Component {
       )
     } else {
       contents = (
-        <div>
+        <div className="create-form">
           <form onSubmit={(e) => this.handleSubmit(e)}>
-            <input type="text" name="listName" placeholder="Name Your Adventure" onChange={this.handleInputChange} />
-            <input type="submit" value="Start" />
+            <input type="text" className="create" name="listName" placeholder="Name Your Adventure" onChange={this.handleInputChange} />
+            <input type="submit" className="btn btn-primary" value="Start" />
           </form>
         </div>
       )

@@ -43,6 +43,17 @@ body {
   margin: 15px;
 }
 
+.create {
+  height: 38;
+  padding: 6px;
+  border-radius: .25em;
+  border-color: transparent;
+}
+
+.create-form {
+  margin: 100px 0px;
+}
+
 img {
   position: absolute;
   top: 5px;
