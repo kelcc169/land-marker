@@ -36,13 +36,17 @@ router.post('/signup', (req, res) => {
 //route for login
 router.post('/login', (req, res) => {
   // find user in db by email
+  console.log('zero')
   User.findOne({email: req.body.email}, (err, user) => {
     if (!user) {
+      console.log('one')
       // if not found, (err), return an error
       res.json({type: 'error', message: 'Account not found'})
     } else {
+      console.log('two')
       // if found, check authentication
       if (user.authenticated(req.body.password)) {
+        console.log('three')
         // if authenticated, sign a token (login)
         var token = jwt.sign(user.toObject(), process.env.JWT_SECRET, {
           expiresIn: '1d'
@@ -50,6 +54,7 @@ router.post('/login', (req, res) => {
         // return the token to be saved by the browser
         res.status(200).json({type: 'success', user: user.toObject(), token})
       } else {
+        console.log('four')
         res.json({type: 'error', message: 'Authentication failure'})
       }
     }
